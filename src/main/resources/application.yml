@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: person
+
+  profiles:
+    active: default
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: false
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    generate-ddl: false
+
+  liquibase:
+    enabled: true
+    change-log: classpath:migration/main.xml
+

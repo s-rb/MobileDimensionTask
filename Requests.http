@@ -1,0 +1,51 @@
+
+POST localhost:8080/person
+Content-Type: application/json
+
+{
+  "documentNumber": "111-111",
+  "firstName":"Ivan",
+  "lastName":"Ivanov",
+  "birthday":"06-09-1999"
+}
+
+###
+POST localhost:8080/person
+Content-Type: application/json
+
+{
+  "documentNumber": "222-222",
+  "firstName":"Petr",
+  "lastName":"Petrov",
+  "birthday":"09-06-1999"
+}
+
+###
+GET localhost:8080/person
+Content-Type: application/json
+###
+GET localhost:8080/person/1
+Content-Type: application/json
+
+###
+PUT localhost:8080/person/2
+Content-Type: application/json
+
+{
+  "firstName":"Petr-2",
+  "lastName":"Petrov",
+  "birthday":"09-09-1999"
+}
+
+###
+
+GET localhost:8080/person/1/friend
+Content-Type: application/json
+
+###
+POST localhost:8080/person/2/friend/1
+Content-Type: application/json
+
+###
+DELETE localhost:8080/person/2
+Content-Type: application/json
