@@ -1,12 +1,14 @@
 package ru.mobiledimension.test.mapper;
 
 import org.mapstruct.*;
+import org.springframework.stereotype.Component;
 import ru.mobiledimension.test.domain.Person;
 import ru.mobiledimension.test.dto.PersonDTO;
 import ru.mobiledimension.test.dto.PersonSmallDto;
 
 import java.util.List;
 
+@Component
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
 
