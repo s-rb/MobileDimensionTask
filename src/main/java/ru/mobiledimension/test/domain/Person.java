@@ -33,7 +33,7 @@ public class Person {
     //todo реализовать связь многие-ко-многим через промежуточную таблицу person_friend
     @ManyToMany
     @JoinTable(name = "person_friend",
-    joinColumns = @JoinColumn(name = "id"),
+    joinColumns = @JoinColumn(name = "person_id"),
     inverseJoinColumns = @JoinColumn(name = "friend_id"))
     private List<Person> friends;
 

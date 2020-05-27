@@ -34,7 +34,7 @@ public class PersonService {
     }
 
     private boolean isDocumentValid(String documentNumber) {
-        return personRepository.isDocumentRegistered(documentNumber);
+        return !personRepository.isDocumentRegistered(documentNumber);
     }
 
     @Transactional
